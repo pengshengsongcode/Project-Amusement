@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  01-百思不得姐
+//
+//  Created by xiaomage on 15/7/22.
+//  Copyright (c) 2015年 小码哥. All rights reserved.
+//
+
+#ifndef _1_______PrefixHeader_pch
+#define _1_______PrefixHeader_pch
+
+#import "UIView+PSSExtension.h"
+#import "UIBarButtonItem+PSSExtension.h"
+#import "PSSConst.h"
+#import "NSDate+PSSExtension.h"
+
+#ifdef DEBUG
+#define PSSLog(...) NSLog(__VA_ARGS__)
+#else
+#define PSSLog(...)
+#endif
+
+#define PSSLogFunc PSSLog(@"%s", __func__)
+
+#define PSSRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define PSSGlobalBg PSSRGBColor(223, 223, 223)
+#endif
